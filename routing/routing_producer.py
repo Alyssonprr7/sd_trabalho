@@ -5,7 +5,7 @@ from datetime import datetime
 
 def get_connection():
     """Cria uma conexão com RabbitMQ"""
-    connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.15.6'))
     return connection
 
 def direct_producer():
@@ -64,4 +64,4 @@ def fanout_producer():
     connection.close()
 
 if __name__ == '__main__':
-    fanout_producer()
+    direct_producer()
