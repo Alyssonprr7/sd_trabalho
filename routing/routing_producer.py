@@ -64,4 +64,4 @@ def fanout_producer():
     connection.close()
 
 if __name__ == '__main__':
-    direct_producer()
+    fanout_producer()

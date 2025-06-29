@@ -7,7 +7,7 @@ import json
 
 def get_connection():
     """Cria uma conexão com RabbitMQ"""
-    connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.15.6'))
     return connection
 
 def round_robin_producer(num_tasks=6):

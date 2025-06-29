@@ -4,7 +4,7 @@ import time
 import json
 
 def get_connection():
-    return pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    return pika.BlockingConnection(pika.ConnectionParameters('192.168.15.6'))
 
 def priority_producer():
     channel_name = 'priority_queue'
@@ -15,16 +15,16 @@ def priority_producer():
 
     
     mensagens = [
-        {'data': 'Mensagem prioridade baixa', 'priority': 1},
-        {'data': 'Mensagem prioridade média', 'priority': 5},
-        {'data': 'Mensagem prioridade alta', 'priority': 10},
-        {'data': 'Mensagem prioridade baixa', 'priority': 3},
-        {'data': 'Mensagem prioridade média', 'priority': 4},
-        {'data': 'Mensagem prioridade alta', 'priority': 2},
-        {'data': 'Mensagem prioridade baixa', 'priority': 9},
-        {'data': 'Mensagem prioridade média', 'priority': 7},
-        {'data': 'Mensagem prioridade alta', 'priority': 6},
-        {'data': 'Mensagem prioridade alta', 'priority': 8},
+        {'data': 'Mensagem prioridade', 'priority': 1},
+        {'data': 'Mensagem prioridade', 'priority': 5},
+        {'data': 'Mensagem prioridade', 'priority': 10},
+        {'data': 'Mensagem prioridade', 'priority': 3},
+        {'data': 'Mensagem prioridade', 'priority': 4},
+        {'data': 'Mensagem prioridade', 'priority': 2},
+        {'data': 'Mensagem prioridade', 'priority': 9},
+        {'data': 'Mensagem prioridade', 'priority': 7},
+        {'data': 'Mensagem prioridade', 'priority': 6},
+        {'data': 'Mensagem prioridade', 'priority': 8},
     ]
 
     for msg in mensagens:

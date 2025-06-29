@@ -3,7 +3,7 @@ import json
 import time
 
 def send_pensistece_message():
-    connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.15.6'))
     channel = connection.channel()
     
     # Fila NÃO durável (desaparece após restart)
